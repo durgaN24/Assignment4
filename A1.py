@@ -2,15 +2,17 @@
 
 import csv
 numfile = "numberfile.csv"
-class assignment4:
 
+# class is example of encapsulation
+class assignment4:
+    
     def readwrite(f1):
         with open(f1 , "r") as a:
             r = a.readlines ()
             for row in r:
                 print(row)
     
-    def sum1(f):
+    def sum1(self,f):
         with open(f, "r") as file1:
             lines = file1.readlines ()
 
@@ -23,9 +25,24 @@ class assignment4:
             
             print (sum)
             file1.close()
-            return sum
+            
             
 
     readwrite(numfile);
-    sum1(numfile)
+
+#inheritance
+class assgn4(assignment4):
+    #polymorphism
+    def sum1(self):
+        print('sum')
+
+#object created
+o1 = assignment4()
+o2 = assgn4()
+
+o1.sum1(numfile)
+o2.sum1()
+
+
+
 
