@@ -6,9 +6,10 @@ numfile = "numberfile.csv"
 # class is example of encapsulation
 class assignment4:
     
-    def readwrite(f1):
+    def readwrite(self, f1):
         with open(f1 , "r") as a:
             r = a.readlines ()
+            print ('File data is')
             for row in r:
                 print(row)
     
@@ -23,25 +24,32 @@ class assignment4:
                 if c.isdigit() == True:
                     sum = sum + int (c)
             
+            print ('\nSum is =')
             print (sum)
             file1.close()
             
             
 
-    readwrite(numfile);
 
 #inheritance
 class assgn4(assignment4):
     #polymorphism
+    pass
     def sum1(self):
-        print('sum')
+        print('\nThis is example of polymorphism\n')
 
 #object created
 o1 = assignment4()
 o2 = assgn4()
 
+
+#polymorphism
 o1.sum1(numfile)
 o2.sum1()
+
+#inheritance
+x = assgn4()
+x.readwrite(numfile)
 
 
 
