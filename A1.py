@@ -12,7 +12,7 @@ class assignment4:
             print ('File data is')
             for row in r:
                 print(row)
-    
+    #changes
     def sum1(self,f):
         with open(f, "r") as file1:
             lines = file1.readlines ()
